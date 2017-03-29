@@ -43,6 +43,11 @@ body {
   background-color: white;
 }
 
+.resetGame {
+  padding: 5px;
+  margin-top: 20px;
+}
+
 div.mine, div.mine:hover {
   background: no-repeat center/60% url("images/bomb.svg") crimson;
 }
