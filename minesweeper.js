@@ -5,7 +5,7 @@ var size = 4;
 var totalMines = 3;
 var board = {
   cells: []
-};
+}
 
 
 function startGame () {
@@ -44,8 +44,18 @@ function newBoard(size){
   }
 }
 
-//attempt at resetting game
+//Play sound
+function soundClip(type) {
+  if (type==="win") {
+  var audio = document.getElementsByTagName('audio')[0];
+  audio.play();
+} else if (type==="lose") {
+  var audio = document.getElementsByTagName('audio')[1];
+  audio.play();
+  }
+}
 
+//Reset game
 function resetGame() {
     location.reload();
 }
