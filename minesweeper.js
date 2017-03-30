@@ -63,7 +63,7 @@ function checkForWin () {
       }
     }
     lib.displayMessage('You saved us!');
-    playAudio("win");
+    playAudio("cheering");
     return;
   }
 
@@ -94,10 +94,10 @@ function countSurroundingMines (cell) {
 
 //Play sound
 function playAudio(audioType) {
-  if (audioType=="win") {
+  if (audioType=="cheering") {
   var audio = document.getElementsByTagName('audio')[0];
-} else if (audioType=="lose") {
+} /* else if (audioType=="jaws") {
   var audio = document.getElementsByTagName('audio')[1];
-  }
+} */
   audio.play();
 }
