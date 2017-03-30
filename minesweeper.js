@@ -44,17 +44,6 @@ function newBoard(size){
   }
 }
 
-//Play sound
-function soundClip(type) {
-  if (type==="win") {
-  var audio = document.getElementsByTagName('audio')[0];
-  audio.play();
-} else if (type==="lose") {
-  var audio = document.getElementsByTagName('audio')[1];
-  audio.play();
-  }
-}
-
 //Reset game
 function resetGame() {
     location.reload();
@@ -74,6 +63,7 @@ function checkForWin () {
       }
     }
     lib.displayMessage('You saved us!');
+    playAudio("win");
     return;
   }
 
@@ -100,4 +90,14 @@ function countSurroundingMines (cell) {
     }
   }
   return count;
+}
+
+//Play sound
+function playAudio(audioType) {
+  if (audioType=="win") {
+  var audio = document.getElementsByTagName('audio')[0];
+} else if (audioType=="lose") {
+  var audio = document.getElementsByTagName('audio')[1];
+  }
+  audio.play();
 }
